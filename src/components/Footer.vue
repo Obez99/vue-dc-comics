@@ -84,7 +84,43 @@
       </div>
     </div>
 
-    <div class="bottom-footer"></div>
+    <div class="bottom-footer">
+      <div>
+        <button>SIGN-UP NOW!</button>
+      </div>
+
+      <div class="social-section">
+        <h3>FOLLOW US</h3>
+
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="../assets/footer-facebook.png" alt="dc-facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/footer-twitter.png" alt="dc-twitter"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/footer-youtube.png" alt="dc-youtube"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/footer-pinterest.png" alt="dc-pinteres"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../assets/footer-periscope.png" alt="dc-periscope"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -125,6 +161,7 @@ export default {
 .middle-footer {
   background-image: url("../assets/footer-bg.jpg");
   background-size: cover;
+  overflow: hidden;
   padding: 40px 0;
   display: flex;
   justify-content: space-between;
@@ -135,6 +172,7 @@ export default {
     ul {
       list-style: none;
       display: inline-block;
+      padding-inline-start: 0;
 
       li {
         margin-bottom: 5px;
@@ -157,6 +195,47 @@ export default {
       position: absolute;
       right: 0;
       top: -100px;
+    }
+  }
+}
+
+.bottom-footer {
+  z-index: 1;
+  background-color: rgb(48, 48, 48);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    background: none;
+    border: 1px solid #0282f9;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .social-section {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      color: #0282f9;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    img {
+      width: 40px;
     }
   }
 }
