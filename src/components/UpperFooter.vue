@@ -45,8 +45,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../styles/variables";
 .upper-footer {
-  background-color: #0282f9;
+  background-color: $primary-color;
   padding: 50px 0;
 
   img {

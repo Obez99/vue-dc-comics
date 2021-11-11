@@ -53,6 +53,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../styles/variables";
+
 .bottom-footer {
   z-index: 1;
   background-color: rgb(48, 48, 48);
@@ -63,7 +65,7 @@ export default {
 
   button {
     background: none;
-    border: 1px solid #0282f9;
+    border: 1px solid $primary-color;
     color: white;
     padding: 15px;
     cursor: pointer;
@@ -76,7 +78,7 @@ export default {
     align-items: center;
 
     h3 {
-      color: #0282f9;
+      color: $primary-color;
     }
 
     ul {

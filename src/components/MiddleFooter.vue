@@ -73,6 +73,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../styles/variables";
+
 .middle-footer {
   background-image: url("../assets/footer-bg.jpg");
   background-size: cover;

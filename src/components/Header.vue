@@ -35,6 +35,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../styles/variables";
+
 header {
   display: flex;
   justify-content: space-between;
@@ -57,7 +59,7 @@ header {
       }
 
       &:hover {
-        color: #0282f9;
+        color: $primary-color;
       }
     }
   }
