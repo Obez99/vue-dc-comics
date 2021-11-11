@@ -13,7 +13,7 @@ export default {
 
 main {
   font-size: 30px;
-  padding: 50px 0;
+  padding: $sections-padding-vertical $sections-padding-horizontal;
   color: white;
   background-color: black;
 }

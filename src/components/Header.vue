@@ -41,8 +41,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-
+  padding: $sections-padding-vertical $sections-padding-horizontal;
   ul {
     list-style: none;
     font-weight: bold;
@@ -54,8 +53,7 @@ header {
         text-decoration: none;
         color: inherit;
         display: inline-block;
-
-        padding: 10px 20px;
+        padding: $sections-padding-vertical;
       }
 
       &:hover {

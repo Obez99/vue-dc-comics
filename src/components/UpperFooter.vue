@@ -48,7 +48,8 @@ export default {
 @import "../styles/variables";
 .upper-footer {
   background-color: $primary-color;
-  padding: 50px 0;
+  padding-top: $sections-padding-vertical;
+  padding-bottom: $sections-padding-vertical;
 
   img {
     width: 50px;

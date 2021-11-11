@@ -79,7 +79,7 @@ export default {
   background-image: url("../assets/footer-bg.jpg");
   background-size: cover;
   overflow: hidden;
-  padding: 40px 0;
+  padding: $sections-padding-vertical $sections-padding-horizontal;
   display: flex;
   justify-content: space-between;
 
