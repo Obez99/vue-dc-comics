@@ -1,35 +1,9 @@
 <template>
   <div class="upper-footer">
     <ul>
-      <li>
+      <li v-for="(item, i) in shopItems" :key="i">
         <a href="#"
-          ><img src="../assets/buy-comics-digital-comics.png" alt="" />DIGITAL
-          COMICS</a
-        >
-      </li>
-      <li>
-        <a href="#"
-          ><img src="../assets/buy-comics-merchandise.png" alt="" />DC
-          MERCHANDISE</a
-        >
-      </li>
-      <li>
-        <a href="#"
-          ><img
-            src="../assets/buy-comics-subscriptions.png"
-            alt=""
-          />SUBSCRIPTION</a
-        >
-      </li>
-      <li>
-        <a href="#"
-          ><img src="../assets/buy-comics-shop-locator.png" alt="" />COMIC SHOP
-          LOCATOR</a
-        >
-      </li>
-      <li>
-        <a href="#"
-          ><img src="../assets/buy-dc-power-visa.svg" alt="" />DC POWER VISA</a
+          ><img :src="item.image" :alt="item.text" />{{ item.text }}</a
         >
       </li>
     </ul>
@@ -39,6 +13,32 @@
 <script>
 export default {
   name: "UpperFooter",
+  data() {
+    return {
+      shopItems: [
+        {
+          image: "../assets/buy-comics-digital-comics.png",
+          text: "DIGITAL COMICS",
+        },
+        {
+          image: "../assets/buy-comics-merchandise.png",
+          text: "DC MERCHANDISE",
+        },
+        {
+          image: "../assets/buy-comics-subscriptions.png",
+          text: "SUBSCRIPTION",
+        },
+        {
+          image: "../assets/buy-comics-shop-locator.png",
+          text: "COMIC SHOP LOCATOR",
+        },
+        {
+          image: "../assets/buy-dc-power-visa.png",
+          text: "DC POWER VISA",
+        },
+      ],
+    };
+  },
 };
 </script>
 
