@@ -2,21 +2,29 @@
   <div id="app">
     <Header></Header>
     <Main></Main>
-    <Footer></Footer>
+    <footer>
+      <UpperFooter></UpperFooter>
+      <MiddleFooter></MiddleFooter>
+      <BottomFooter></BottomFooter>
+    </footer>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
-import Footer from "./components/Footer.vue";
+import UpperFooter from "./components/UpperFooter.vue";
+import MiddleFooter from "./components/MiddleFooter.vue";
+import BottomFooter from "./components/BottomFooter.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Main,
-    Footer,
+    UpperFooter,
+    MiddleFooter,
+    BottomFooter,
   },
 };
 </script>
