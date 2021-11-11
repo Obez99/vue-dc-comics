@@ -3,7 +3,9 @@
     <ul>
       <li v-for="(item, i) in shopItems" :key="i">
         <a href="#"
-          ><img :src="item.image" :alt="item.text" />{{ item.text }}</a
+          ><img :src="require('../assets/' + item.image)" :alt="item.text" />{{
+            item.text
+          }}</a
         >
       </li>
     </ul>
@@ -17,23 +19,23 @@ export default {
     return {
       shopItems: [
         {
-          image: "../assets/buy-comics-digital-comics.png",
+          image: "buy-comics-digital-comics.png",
           text: "DIGITAL COMICS",
         },
         {
-          image: "../assets/buy-comics-merchandise.png",
+          image: "buy-comics-merchandise.png",
           text: "DC MERCHANDISE",
         },
         {
-          image: "../assets/buy-comics-subscriptions.png",
+          image: "buy-comics-subscriptions.png",
           text: "SUBSCRIPTION",
         },
         {
-          image: "../assets/buy-comics-shop-locator.png",
+          image: "buy-comics-shop-locator.png",
           text: "COMIC SHOP LOCATOR",
         },
         {
-          image: "../assets/buy-dc-power-visa.png",
+          image: "buy-dc-power-visa.svg",
           text: "DC POWER VISA",
         },
       ],
