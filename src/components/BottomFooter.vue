@@ -58,7 +58,7 @@ export default {
 .bottom-footer {
   z-index: 1;
   background-color: rgb(48, 48, 48);
-  padding: $sections-padding-vertical/2 $sections-padding-horizontal/2;
+  padding: $sections-padding-vertical/2 $sections-padding-horizontal;
 
   display: flex;
   justify-content: space-between;
