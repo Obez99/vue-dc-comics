@@ -8,29 +8,11 @@
       <h3>FOLLOW US</h3>
 
       <ul>
-        <li>
+        <li v-for="(listItem, i) in socialButtons" :key="i">
           <a href="#"
-            ><img src="../assets/footer-facebook.png" alt="dc-facebook"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../assets/footer-twitter.png" alt="dc-twitter"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../assets/footer-youtube.png" alt="dc-youtube"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../assets/footer-pinterest.png" alt="dc-pinteres"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../assets/footer-periscope.png" alt="dc-periscope"
+            ><img
+              :src="require('../assets/' + listItem.image)"
+              :alt="listItem.name"
           /></a>
         </li>
       </ul>
@@ -41,6 +23,32 @@
 <script>
 export default {
   name: "BottomFooter",
+  data() {
+    return {
+      socialButtons: [
+        {
+          name: "Facebook",
+          image: "footer-facebook.png",
+        },
+        {
+          name: "Twitter",
+          image: "footer-twitter.png",
+        },
+        {
+          name: "Youtube",
+          image: "footer-youtube.png",
+        },
+        {
+          name: "Pinterest",
+          image: "footer-pinterest.png",
+        },
+        {
+          name: "Periscope",
+          image: "footer-periscope.png",
+        },
+      ],
+    };
+  },
 };
 </script>
 
