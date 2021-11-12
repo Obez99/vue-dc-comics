@@ -2,41 +2,26 @@
   <main>
     <div class="jumbotron"></div>
     <div class="products-container">
-      <div class="product">
-        <img src="../assets/buy-comics-digital-comics.png" alt="" />
-        <h5>ACTION COMICS</h5>
-      </div>
-      <div class="product">
-        <img src="../assets/buy-comics-digital-comics.png" alt="" />
-        <h5>ACTION COMICS</h5>
-      </div>
-      <div class="product">
-        <img src="../assets/buy-comics-digital-comics.png" alt="" />
-        <h5>ACTION COMICS</h5>
-      </div>
-      <div class="product">
-        <img src="../assets/buy-comics-digital-comics.png" alt="" />
-        <h5>ACTION COMICS</h5>
-      </div>
-      <div class="product">
-        <img src="../assets/buy-comics-digital-comics.png" alt="" />
-        <h5>ACTION COMICS</h5>
-      </div>
-      <div class="product">
-        <img src="../assets/buy-comics-digital-comics.png" alt="" />
-        <h5>ACTION COMICS</h5>
-      </div>
-      <div class="product">
-        <img src="../assets/buy-comics-digital-comics.png" alt="" />
-        <h5>ACTION COMICS</h5>
+      <div v-for="(product, i) in products" :key="i" class="product">
+        <div class="product-image">
+          <img :src="product.thumb" :alt="product.series" />
+        </div>
+        <h5>{{ product.series }}</h5>
       </div>
     </div>
   </main>
 </template>
 
 <script>
+import products from "../assets/dc-comics.json";
+
 export default {
   name: "Main",
+  data() {
+    return {
+      products: products,
+    };
+  },
 };
 </script>
 
@@ -64,8 +49,19 @@ main {
     .product {
       width: calc(100% / 6 - 30px);
 
-      img {
-        width: 100%;
+      .product-image {
+        height: 250px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+
+      h5 {
+        margin: 0;
       }
     }
   }
