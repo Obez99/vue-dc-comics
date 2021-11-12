@@ -2,21 +2,22 @@
   <main>
     <div class="jumbotron"></div>
     <div class="products-container">
-      <div v-for="(product, i) in products" :key="i" class="product">
-        <div class="product-image">
-          <img :src="product.thumb" :alt="product.series" />
-        </div>
-        <h5>{{ product.series }}</h5>
-      </div>
+      <Product
+        v-for="(product, i) in products"
+        :key="i"
+        :thumb="product.thumb"
+        :series="product.series"
+      ></Product>
     </div>
   </main>
 </template>
 
 <script>
 import products from "../assets/dc-comics.json";
-
+import Product from "./Product.vue";
 export default {
   name: "Main",
+  components: { Product },
   data() {
     return {
       products: products,
@@ -45,25 +46,6 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
-
-    .product {
-      width: calc(100% / 6 - 30px);
-
-      .product-image {
-        height: 250px;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: top;
-        }
-      }
-
-      h5 {
-        margin: 0;
-      }
-    }
   }
 }
 </style>
