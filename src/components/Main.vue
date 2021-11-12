@@ -2,7 +2,34 @@
   <main>
     <div class="jumbotron"></div>
     <div class="products-container">
-      <div class="box">CURRENT SERIES</div>
+      <div class="product">
+        <img src="../assets/buy-comics-digital-comics.png" alt="" />
+        <h5>ACTION COMICS</h5>
+      </div>
+      <div class="product">
+        <img src="../assets/buy-comics-digital-comics.png" alt="" />
+        <h5>ACTION COMICS</h5>
+      </div>
+      <div class="product">
+        <img src="../assets/buy-comics-digital-comics.png" alt="" />
+        <h5>ACTION COMICS</h5>
+      </div>
+      <div class="product">
+        <img src="../assets/buy-comics-digital-comics.png" alt="" />
+        <h5>ACTION COMICS</h5>
+      </div>
+      <div class="product">
+        <img src="../assets/buy-comics-digital-comics.png" alt="" />
+        <h5>ACTION COMICS</h5>
+      </div>
+      <div class="product">
+        <img src="../assets/buy-comics-digital-comics.png" alt="" />
+        <h5>ACTION COMICS</h5>
+      </div>
+      <div class="product">
+        <img src="../assets/buy-comics-digital-comics.png" alt="" />
+        <h5>ACTION COMICS</h5>
+      </div>
     </div>
   </main>
 </template>
@@ -28,14 +55,18 @@ main {
   }
 
   .products-container {
-    padding: 0 $sections-padding-horizontal;
+    padding: $sections-padding-vertical $sections-padding-horizontal;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
 
-    .box {
-      font-size: 25px;
-      display: inline-block;
-      padding: 15px 20px;
-      background-color: $primary-color;
-      transform: translateY(-29.5px);
+    .product {
+      width: calc(100% / 6 - 30px);
+
+      img {
+        width: 100%;
+      }
     }
   }
 }
