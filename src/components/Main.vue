@@ -1,6 +1,7 @@
 <template>
   <main>
     <div class="jumbotron"></div>
+    <h4>CURRENT SERIES</h4>
     <div class="products-container">
       <Product
         v-for="(product, i) in products"
@@ -8,6 +9,7 @@
         :thumb="product.thumb"
         :series="product.series"
       ></Product>
+      <button>LOAD MORE</button>
     </div>
   </main>
 </template>
@@ -32,7 +34,24 @@ export default {
 main {
   font-size: 30px;
   color: white;
-  background-color: black;
+  background-color: rgb(28, 28, 28);
+  h4 {
+    background-color: $primary-color;
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 0;
+    margin-left: $sections-padding-horizontal - 15px;
+    transform: translateY(-27px);
+  }
+
+  button {
+    background-color: $primary-color;
+    padding: 10px 50px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+  }
 
   .jumbotron {
     width: 100%;
