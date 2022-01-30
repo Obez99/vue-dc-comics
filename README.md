@@ -3,7 +3,7 @@
 ## Description
 
 This project is a clone of the DC Comics website, made with **Vue CLI**.<br>
-To make this project I created various components including the ```Product``` component, it receives props from the ```Main``` component.<br>
+To make this project I created various components including the ```Product``` component, wich receives props from the ```Main``` component.<br>
 Each list is created dynamically using arrays.
 
 ## Screenshots
